@@ -131,9 +131,6 @@ shopt -s histappend                      # append to history, don't overwrite it
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-# added by travis gem
-source /Users/brunosanches/.travis/travis.sh
-
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 
 export PGHOST=localhost
