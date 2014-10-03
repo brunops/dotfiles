@@ -115,7 +115,14 @@ else
   sq_color=$BBlue
 fi
 
-export PS1="\n$sq_color\342\224\214\342\224\200\$([[ \$? != 0 ]] && echo \"[$BRed\342\234\227$sq_color]\342\224\200\")[$IBlack\t$sq_color]\342\224\200[\[\033[01;37m\]\u$sq_color]\342\224\200[$BGreen\w$sq_color]\n$sq_color\342\224\224\342\224\200\342\224\200> $BRed\$("__git_ps1") $sq_color\$ $Color_Off"
+error_icon="[$BRed\342\234\227$sq_color]\342\224\200"
+
+ps1="\n$sq_color\342\224\214\342\224\200"
+ps1="$ps1\$([[ \$? == 0 ]] || echo \"$error_icon\")"
+ps1="$ps1[$IBlack\t$sq_color]\342\224\200[\[\033[$BWhite\]\u$sq_color]\342\224\200[$BGreen\w$sq_color]\n$sq_color\342\224\224\342\224\200\342\224\200> $BRed\$("__git_ps1") $sq_color\$ $Color_Off"
+
+
+export PS1=$ps1
 
 unset sq_color
 
