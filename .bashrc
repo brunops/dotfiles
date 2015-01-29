@@ -1,3 +1,6 @@
+# Clear Terminal title after closing an ssh session
+export PROMPT_COMMAND='printf "\e]0;\a"'
+
 # enable git variables and completion
 source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
 source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
