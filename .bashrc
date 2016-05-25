@@ -147,3 +147,16 @@ export PGHOST=localhost
 
 # Make Sublime as the default editor and make it wait for changes
 which -s subl && export EDITOR="subl --wait"
+
+# git aliases
+alias gst='git status '
+alias gco='git checkout '
+alias gcob='git checkout -b '
+alias ga='git add '
+alias gb='git branch '
+alias gl='git log '
+alias gd='git diff '
+alias gdc='git diff --cached '
+alias glp='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short'
+
+
