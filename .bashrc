@@ -150,6 +150,7 @@ which -s subl && export EDITOR="subl --wait"
 
 # git aliases
 alias gst='git status '
+alias gci='git commit -v'
 alias gco='git checkout '
 alias gcob='git checkout -b '
 alias ga='git add '
