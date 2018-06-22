@@ -1,9 +1,14 @@
+
 # Clear Terminal title after closing an ssh session
 export PROMPT_COMMAND='printf "\e]0;\a"'
 
 # enable git variables and completion
-source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
-source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
+#source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
+source ~/.git-completion.bash
+source ~/.git-prompt.sh
+#source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
+
+#[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 # enable color support of ls and also add handy aliases
 alias ls='ls -G'
@@ -129,7 +134,6 @@ export PS1=$ps1
 
 unset sq_color
 
-
 # HISTORY Stuff
 export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
 export HISTSIZE=100000                   # big big history
@@ -148,6 +152,11 @@ export PGHOST=localhost
 # Make Sublime as the default editor and make it wait for changes
 which -s subl && export EDITOR="subl --wait"
 
+# nvm config
+export NVM_DIR=~/.nvm
+. $(brew --prefix nvm)/nvm.sh
+
+
 # git aliases
 alias gst='git status '
 alias gpush='git push '
@@ -161,5 +170,9 @@ alias gl='git log '
 alias gd='git diff '
 alias gdc='git diff --cached '
 alias glp='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short'
+
+
+# set go path
+export GOPATH=~/go
 
 
