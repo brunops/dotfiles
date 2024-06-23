@@ -29,3 +29,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# cow saying your fortune (how awesome is that?)
+#fortune -s | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n1)
+fortune -s | cowsay -ftux

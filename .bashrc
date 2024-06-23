@@ -87,10 +87,6 @@ PathFull="\W"
 NewLine="\n"
 Jobs="\j"
 
-# cow saying your fortune (how awesome is that?)
-#fortune -s | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n1)
-fortune -s | cowsay -ftux
-
 #show current project and branch
 GIT_PS1_SHOWDIRTYSTATE=false
 
