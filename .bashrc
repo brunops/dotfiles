@@ -1,24 +1,6 @@
 # Clear Terminal title after closing an ssh session
 export PROMPT_COMMAND='printf "\e]0;\a"'
 
-# enable git variables and completion
-source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
-source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
-
-# enable color support of ls and also add handy aliases
-alias ls='ls -G'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-
-# some more ls aliases
-alias ll='ls -alFG'
-alias la='ls -AG'
-alias l='ls -CFG'
-
-# make irssi connect automatically to freenode with my nick
-alias irssic='irssi -n brunops -c irc.freenode.org'
-
 #### GIT && PS1
 #  SETUP CONSTANTS
 #  Bunch-o-predefined colors.  Makes reading code easier than escape sequences.
@@ -124,11 +106,9 @@ ps1="\n$sq_color\342\224\214\342\224\200"
 ps1="$ps1\$([[ \$? == 0 ]] || echo \"$error_icon\")"
 ps1="$ps1[$IBlack\t$sq_color]\342\224\200[\[\033[$BWhite\]\u$sq_color]\342\224\200[$BGreen\w$sq_color]\n$sq_color\342\224\224\342\224\200\342\224\200> $BRed\$("__git_ps1") $sq_color\$ $Color_Off"
 
-
 export PS1=$ps1
 
 unset sq_color
-
 
 # HISTORY Stuff
 export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
@@ -136,17 +116,10 @@ export HISTSIZE=100000                   # big big history
 export HISTFILESIZE=100000               # big big history
 shopt -s histappend                      # append to history, don't overwrite it
 
-# Save and reload the history after each command finishes
-# export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
-
-export PGHOST=localhost
 
 # Make Sublime as the default editor and make it wait for changes
-which -s subl && export EDITOR="subl --wait"
+# which -s subl && export EDITOR="subl --wait"
 
 # git aliases
 alias gst='git status '
